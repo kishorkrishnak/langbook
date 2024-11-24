@@ -1,22 +1,16 @@
-import { Message } from "@/types/Message";
 import ChatBubble from "./ChatBubble";
-import LoadingChatBubble from "./LoadingChatBubble";
-
 interface ChatBubbleProps {
-    chatHistory: Message[];
-    isLoading: boolean;
+    chatHistory: any[];
 }
 
-const ChatArea = ({ chatHistory, isLoading }: ChatBubbleProps) => {
+const ChatArea = ({ chatHistory }: ChatBubbleProps) => {
     return (
-        <div className='overflow-y-auto custom-scrollbar custom-scrollbar-thin mt-4 md:mt-6 h-full flex flex-col gap-3'>
-
+        <div className="overflow-y-auto custom-scrollbar custom-scrollbar-thin mt-4 md:mt-6 h-full flex flex-col gap-3">
             {chatHistory.map((message, index) => {
-                return <ChatBubble key={index} message={message} />
+                return <ChatBubble key={index} message={message} />;
             })}
-            {isLoading && <LoadingChatBubble />}
         </div>
-    )
-}
+    );
+};
 
-export default ChatArea
+export default ChatArea;
