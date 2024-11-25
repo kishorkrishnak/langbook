@@ -19,9 +19,9 @@ export default function Home() {
   }
 
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => { // Correct typing for the event.
     if (e.key === "Enter") {
-      handleSubmit()
+      handleSubmit();
     }
   };
 
@@ -54,7 +54,6 @@ export default function Home() {
         </div>
         <div className="hidden md:flex h-full w-full md:w-[300px] border-l border-white"></div>
       </div>
-      
     </div>
   );
 }

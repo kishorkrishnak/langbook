@@ -1,4 +1,4 @@
-export async function GET(req: Request) {
+export async function GET() {
   try {
     return Response.json({
       id: "initial_m",
@@ -7,6 +7,7 @@ export async function GET(req: Request) {
       createdAt: new Date(),
     });
   } catch (error) {
+    console.log(error);
     return Response.json(
       { error: "Failed to get initial message" },
       { status: 500 }

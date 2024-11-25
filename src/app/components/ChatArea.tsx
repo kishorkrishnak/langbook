@@ -1,6 +1,7 @@
+import { Message } from "ai";
 import ChatBubble from "./ChatBubble";
 interface ChatBubbleProps {
-    chatHistory: any[];
+    chatHistory: Message[];
 }
 
 const ChatArea = ({ chatHistory }: ChatBubbleProps) => {
