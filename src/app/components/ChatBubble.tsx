@@ -15,7 +15,7 @@ const ChatBubble = ({ message }: ChatBubbleProps) => {
                     <p key={idx}>{line}</p>
                 ))}
                 <p className='ml-auto w-fit text-[10px] text-gray-100'>
-                    {new Date(message?.createdAt)?.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    {new Date(message?.createdAt as string | number | Date)?.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                 </p>
             </div>
 
